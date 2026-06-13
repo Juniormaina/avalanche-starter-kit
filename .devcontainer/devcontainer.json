@@ -18,8 +18,10 @@
 		"PK_43113": "56289e99c94b6912bfc12adc093c9b51124f0dc54ac7a766b2bc5ccf558d8027"
 	},
 	"postCreateCommand": {
-		"init-git-submodules": "git config --global --add safe.directory ${containerWorkspaceFolder} && git submodule update --init --recursive"
-	},
+  "init-git-submodules": "git config --global --add safe.directory ${containerWorkspaceFolder} && git submodule update --init --recursive",
+  "install-tools": "sudo apt-get update && sudo apt-get install -y curl git"
+},
+
 	"postStartCommand": {
 		"update-git-submodules": "git submodule update --recursive",
 		"enable-avalanche-cli-metrics": "avalanche config metrics enable",
